@@ -11,7 +11,7 @@
   </head>
 
   <body>
-
+	<img scr='../media/underconstruction.png' alt='under construction image'/>
     <header>
       <div>Put company logo and name here - test mod</div>
     </header>
