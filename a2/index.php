@@ -11,7 +11,6 @@
   </head>
 
   <body>
-	<img scr='../media/underconstruction.png' alt='under construction image' width=225/>
     <header>
       <div>Put company logo and name here - test mod</div>
     </header>
@@ -23,7 +22,7 @@
     <main>
       <article id='Website Under Construction'>
     <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
-        <img src='../../media/website-under-construction.png' alt='Website Under Construction' />
+        <img src='../../media/underconstruction.png' alt='Website Under Construction' width=500/>
       </article>
     </main>
 
