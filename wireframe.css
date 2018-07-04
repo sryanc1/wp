@@ -6,6 +6,7 @@ body
   margin:0px;
   background: rgba(40,40,40,0.1);
   border: 5px solid hsl(314,0%,40%);
+  border-radius: 4px;
   box-sizing: border-box;
 }
 html {
@@ -30,6 +31,7 @@ div
   margin: 5px;
   padding: 5px;
   box-sizing: border-box;
+  border-radius: 4px;
 }
 
 /* Give each semantic body element a different color */
@@ -42,6 +44,7 @@ nav
 {
   background-color: hsl(240,100%,97%);
   border: 5px solid hsl(240,100%,60%);
+  padding: 15px;
 }
 main
 {
@@ -79,11 +82,30 @@ div.haeder
 {
   border: 2px dashed hsl(210,100%,40%);  
 }
+
 div.myPic
 {
   width: 210px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.button {
+  background-color: lightblue;
+  color: black;
+  font-size: 16px;
+  text-align: center;
+  padding: 5px 10px;
+  border: 1px black solid;
+  border-radius: 4px;
+  display: inline-box;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.button1:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 /* HTML 4 Deprecated Tags and Attributes*/
 center,
 font,
@@ -137,8 +159,15 @@ header img {
   margin-right: 40px;
 }
 
-nav,
-footer {
+nav a:visited {
+  color:white;
+}
+
+nav a:active {
+  color:darkred;
+}
+
+nav footer {
   padding: 10px;
 }
 
