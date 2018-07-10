@@ -32,6 +32,7 @@ div
   padding: 5px;
   box-sizing: border-box;
   border-radius: 4px;
+  
 }
 
 /* Give each semantic body element a different color */
@@ -76,6 +77,9 @@ details
 {
   background-color: hsl(60,60%,97%);
   border: 5px solid hsl(60,60%,60%);    
+}
+td{
+  font-family: 'Indie Flower', cursive;
 }
 
 div.haeder
@@ -171,7 +175,7 @@ nav footer {
   padding: 10px;
 }
 
-nav ul {
+/*nav ul {
   padding:0;
   margin:0.2em;
   display: inline-block;
@@ -181,7 +185,7 @@ nav ul {
 nav ul li {
   display: inline-block;  
   padding:0.2em;
-}
+}*/
 
 footer * {
   vertical-align: middle;

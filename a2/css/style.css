@@ -1,1 +1,67 @@
 /* Insert your styles here */
+
+.wrapper {
+    display: flex;  
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+    background: #d0c3c3
+}
+
+.wrapper > * {
+    padding: 5px;
+    flex: 1 100%;
+}
+
+.header {
+  
+}
+
+.nav{
+    display: inline;
+    width: 60px;
+}
+
+
+.main {
+    text-align: left;
+    overflow: auto;
+}
+
+img {
+	float: right;
+}
+
+.aside-1 {
+  
+}
+
+.footer {
+    
+}
+
+/*.aside-2 {
+    background-image: url("../../../media/rosie3.png");
+    background-repeat: no-repeat;
+    background-position: right center; 
+    min-width: 200px;
+    min-height: 200px;
+}*/
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .nav	   { order: 1; }
+  .aside-1 { order: 2; } 
+  .main    { order: 3; }
+  .aside-2 { order: 4; }
+  .footer  { order: 5; }
+}
+
+body {
+  padding: 2em; 
+  font-family: 'Indie Flower', cursive;
+}
