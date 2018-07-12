@@ -5,6 +5,7 @@
     flex-flow: row wrap;
     font-weight: bold;
     text-align: center;
+    box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background: #d0c3c3
 }
 
@@ -17,11 +18,11 @@
   
 }
 
-.nav{
+.div{
     display: inline;
     width: 60px;
+    padding: 30px
 }
-
 
 .main {
     text-align: left;
@@ -31,7 +32,7 @@
 img {
 	float: right;
 }
-
+  
 .aside-1 {
   
 }

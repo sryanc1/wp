@@ -17,11 +17,15 @@
       <div>Custom made accessaries for mums and bubs</div>
     </header>
 
-    <nav class="nav">
-      <div>Home</div><div>Home</div><div>Home</div><div>Home</div>  
+    <nav>
+      <div class="div">Home</div>
+      <div class="div">Home</div>
+      <div class="div">Home</div>
+      <div class="div">Home</div>  
     </nav>
 
-    <article class="main">
+	
+		<article class="main">
      
     <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
         <!-- <img src='../../media/underconstruction.png' alt='Website Under Construction' width=500/>-->
@@ -38,7 +42,9 @@
 
 		  
           
-    </article>
+		</article>
+	
+	
     <!--<aside class="aside aside-2">Aside 2</aside>-->
     <aside class="aside aside-1">Aside 1</aside>
     <footer class="footer">
