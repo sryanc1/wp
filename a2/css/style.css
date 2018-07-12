@@ -5,17 +5,30 @@
     flex-flow: row wrap;
     font-weight: bold;
     text-align: center;
-    box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background: #d0c3c3
+	box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background: #d0c3c3
 }
 
 .wrapper > * {
-    padding: 5px;
-    flex: 1 100%;
+	padding: 5px;
+	flex: 1 100%;
 }
 
 .header {
-  
+    font-size: 5em;
+
+
+}
+
+nav {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header2 {
+    padding: 2px;
+    font-size: 3em;
+    text-align: left;
+
 }
 
 .div{
@@ -26,15 +39,21 @@
 
 .main {
     text-align: left;
-    overflow: auto;
+	padding-left: 1em
 }
 
-img {
+.img1 {
+	margin-top: 20px;
+	margin-left: 20px;
+	float: left;
+}
+
+.img2 {
 	float: right;
 }
   
 .aside-1 {
-  
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .footer {
@@ -50,19 +69,19 @@ img {
 }*/
 
 @media all and (min-width: 600px) {
-  .aside { flex: 1 auto; }
+	.aside { flex: 1 auto; }
 }
 
 @media all and (min-width: 800px) {
-  .main    { flex: 3 0px; }
-  .nav	   { order: 1; }
-  .aside-1 { order: 2; } 
-  .main    { order: 3; }
-  .aside-2 { order: 4; }
-  .footer  { order: 5; }
+	.main    { flex: 3 0px; }
+	.nav	   { order: 1; }
+	.aside-1 { order: 2; } 
+	.main    { order: 3; }
+	.aside-2 { order: 4; }
+	.footer  { order: 5; }
 }
 
 body {
-  padding: 2em; 
-  font-family: 'Indie Flower', cursive;
+	padding: 1em; 
+	font-family: 'Indie Flower', cursive;
 }
