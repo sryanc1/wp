@@ -16,72 +16,93 @@
 
 .header {
     font-size: 5em;
-
-
 }
 
-nav {
+.nav {
+	position: -webkit-sticky; /* Safari */
+	background: #d0c3c3;
+	position: sticky;
+	top: 2px;
+    border-radius: 4px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-bottom: 2px solid black;
 }
 
-.header2 {
+.navDiv{
+    display: inline;
+    width: auto;
+    margin: 30px;
+    padding: 30px
+}
+
+.heading2 {
     padding: 2px;
     font-size: 3em;
     text-align: left;
-
 }
 
-.div{
-    display: inline;
-    width: 60px;
-    padding: 30px
+.heading3 {
+
+    font-size: 2em;
+    text-align: centre;
+}
+
+.aside-1 {
+    margin: 10px;
+	border: 2px solid black;
+	border-radius: 4px;
+	box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flexDiv{
+	display: flex;  
+    flex-flow: wrap;
+}
+
+.productDiv{
+	font-size: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	width: 200px;
+	background: white;
+	padding: 5px;
+	border-radius: 4px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .main {
     text-align: left;
-	padding-left: 1em
+	padding-left: 2em;
 }
 
 .img1 {
-	margin-top: 20px;
-	margin-left: 20px;
+	margin: 20px;
 	float: left;
 }
 
 .img2 {
 	float: right;
 }
+
+.img3 {
+	height: 200px;
+}
   
-.aside-1 {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 .footer {
-    
 }
 
-/*.aside-2 {
-    background-image: url("../../../media/rosie3.png");
-    background-repeat: no-repeat;
-    background-position: right center; 
-    min-width: 200px;
-    min-height: 200px;
-}*/
-
-@media all and (min-width: 600px) {
-	.aside { flex: 1 auto; }
-}
-
-@media all and (min-width: 800px) {
+@media all and (min-width: 950px) {
 	.main    { flex: 3 0px; }
-	.nav	   { order: 1; }
+	.nav	 { order: 1; }
 	.aside-1 { order: 2; } 
 	.main    { order: 3; }
-	.aside-2 { order: 4; }
-	.footer  { order: 5; }
+	.footer  { order: 4; }
 }
 
 body {
 	padding: 1em; 
+	border-radius: 4px;
 	font-family: 'Indie Flower', cursive;
+	box-sizing: border-box;
 }
