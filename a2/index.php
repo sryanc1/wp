@@ -11,18 +11,20 @@
   </head>
 
   <body>
-  <div class="wrapper">
-    <header>
-		<div class="img1"><img src="../../media/PosieAndMe.png" alt="Posie and me logo" width= 200px img></div>
-		<div class="header">Posie & Me</div>
-		<h1>Custom made accessaries for mums and bubs</h1>
-    </header>
+    <div class="wrapper">
+		<header>
+			<div class="img1"><img src="../../media/PosieAndMe.png" alt="Posie and me logo" width= 200px img></div>
+			<div class="header">Posie & Me</div>
+			<h1>Custom made accessaries for mums and bubs</h1>
+		</header>
 
     <nav class="nav">
-		<div class="navDiv">Home</div>
-		<div class="navDiv">Home</div>
-		<div class="navDiv">Home</div>
-		<div class="navDiv">Home</div>  
+		<ul>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="products.php">All Products</a></li>
+			<li><a href="design.php">Design Studio</a></li>
+			<li><a href="login.php">Login</a></li>
+		</ul>  
     </nav>
 
 	<article class="main">
@@ -40,31 +42,44 @@
           
 	</article>
 	
-    <aside class="aside-1">
+    <div class="div1">
 		<p class="heading3">Latest Designs</p>
 		<div class="flexDiv">
-		<div class="productDiv">
-			<img class="img3" src="../../media/bag1.jpg" alt="Handbag">
-			<p>Handbags / Nappybags</p>
+			
+			<div class="productDiv">
+				<a href="products.php">
+				<img class="img3" src="../../media/bag1.jpg" alt="Handbag">
+				<p>Handbags / Nappybags<p>	
+				</a>
+			</div>
+			
+			<div class="productDiv">
+				<a href="products.php">
+				<img class="img3" src="../../media/necklace2.jpg" alt="Handbag">
+				<p>Mummy Necklaces</p>
+				</a>
+			</div>
+			
+			<div class="productDiv">
+				<a href="products.php">
+				<img class="img3" src="../../media/earings1.jpg" alt="Handbag">
+				<p>Earrings</p>
+				</a>
+			</div>
+			
+			<div class="productDiv">
+				<a href="products.php">
+				<img class="img3" src="../../media/earings1.jpg" alt="Handbag">
+				<p>Earrings</p>
+				</a>
+			</div>
+		
 		</div>
-		<div class="productDiv">
-			<img class="img3" src="../../media/necklace2.jpg" alt="Handbag">
-			<p>Mummy Necklaces</p>
-		</div>
-		<div class="productDiv">
-			<img class="img3" src="../../media/earings1.jpg" alt="Handbag">
-			<p>Earing</p>
-		</div>
-		<div class="productDiv">
-			<img class="img3" src="../../media/earings1.jpg" alt="Handbag">
-			<p>Earing</p>
-		</div>
-		</div>
-    </aside>
+    </div>
     <footer class="footer">
 		<div>&copy;<script>
 			document.write(new Date().getFullYear());
-		</script> Put your name(s), student number(s) and group name here.</div>
+		</script> Craig Ryan, s3555490.</div>
 		<div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
 		<div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
     </footer>

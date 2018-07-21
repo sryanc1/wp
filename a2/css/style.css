@@ -1,12 +1,14 @@
 /* Insert your styles here */
 
 .wrapper {
-    display: flex;  
+    display: flex; 
+    max-width: 1000px; 
+    margin: auto;
     flex-flow: row wrap;
     font-weight: bold;
     text-align: center;
 	box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	background: #d0c3c3
+	background: #d0c3c3;
 }
 
 .wrapper > * {
@@ -20,19 +22,43 @@
 
 .nav {
 	position: -webkit-sticky; /* Safari */
-	background: #d0c3c3;
 	position: sticky;
+	color: black;
+	background: #d0c3c3;
 	top: 2px;
     border-radius: 4px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	border-bottom: 2px solid black;
 }
 
-.navDiv{
-    display: inline;
-    width: auto;
-    margin: 30px;
-    padding: 30px
+ul { 
+	list-style-type: none;
+}
+
+li {
+	display: inline;
+}
+
+li a {
+	width: 12em;
+	background: #4b7e6b;
+	border-radius: 4px;
+	margin: 2px;
+	display: inline-block;
+	color: white;
+}
+
+li a:visited {
+	background: #2d4b40;
+	color: balck;
+}
+
+li a:hover {
+	box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+li a:active{
+	background: black;
 }
 
 .heading2 {
@@ -42,24 +68,23 @@
 }
 
 .heading3 {
-
     font-size: 2em;
     text-align: centre;
 }
 
-.aside-1 {
+.div1 {
     margin: 10px;
 	border: 2px solid black;
 	border-radius: 4px;
 	box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.flexDiv{
+.flexDiv {
 	display: flex;  
     flex-flow: wrap;
 }
 
-.productDiv{
+.productDiv {
 	font-size: 1em;
 	margin-left: auto;
 	margin-right: auto;
@@ -71,9 +96,17 @@
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.productDiv:hover {
+	box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 8px rgba(0, 0, 0, 0.19);
+}
+
+.img3 {
+	height: 200px;
+}
+
 .main {
     text-align: left;
-	padding-left: 2em;
+	padding: 2em
 }
 
 .img1 {
@@ -84,10 +117,6 @@
 .img2 {
 	float: right;
 }
-
-.img3 {
-	height: 200px;
-}
   
 .footer {
 }
@@ -95,7 +124,7 @@
 @media all and (min-width: 950px) {
 	.main    { flex: 3 0px; }
 	.nav	 { order: 1; }
-	.aside-1 { order: 2; } 
+	.div1 { order: 2; } 
 	.main    { order: 3; }
 	.footer  { order: 4; }
 }
