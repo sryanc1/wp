@@ -8,6 +8,8 @@
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css">
     <script src='../wireframe.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Playfair+Display" rel="stylesheet">
+	<!--All immages used are property of "Posie and Me" and are not for reuse-->
   </head>
 
   <body>
@@ -15,17 +17,39 @@
 		<header>
 			<div class="img1"><img src="../../media/PosieAndMe.png" alt="Posie and me logo" width= 200px img></div>
 			<div class="header">Posie & Me</div>
-			<h1>Custom made accessaries for mums and bubs</h1>
+			<h1 class="heading3">Custom made accessories for mums and bubs</h1>
 		</header>
 
     <nav class="nav">
 		<ul>
-			<li class="navList"><a href="index.php">Home</a></li>
-			<li class="navList"><a href="products.php">All Products</a></li>
-			<li class="navList"><a href="design.php">Design Studio</a></li>
-			<li class="navList"><a href="login.php">Login</a></li>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="products.php">All Products</a></li>
+			<li><a href="design.php">Design Studio</a></li>
+			<li><a href="login.php">Login</a></li>
 		</ul>  
     </nav>
+    
+	<article class="main">  
+		<fieldset>
+			<legend class="heading2">Treat yourself</legend>
+			<a target="_blank" href="../../media/bag1.jpg">
+				<img class="productDiv fullProductImg" src="../../media/bag1.jpg" alt="Handbag">
+			</a>
+			<p>something something</p>
+		<form method="post" action=" https://titan.csit.rmit.edu.au/~e54061/wp/processing.php"> 
+			<input name="id" type="hidden" value="001"/>
+			<p>Price: AU$ <br><input class="form" type="text" value="$100.00" readonly/></p>
+			<p>Size: <br>
+			<select name='option' class="form" required >
+				<option value='' selected>Please Select</option>
+				<option value='large'>For mums</option>
+				<option value='small'>For bubs</option>
+			</select></p>
+			<p>Quantity: <br><input class="form" name="qty" type="number" value="" min="0" placeholder=" 1" required /></p>
+			<p><input class="button form" type="submit" value="Buy" /></p>
+		</form>
+		</fieldset>
+	</article>
     
     <footer class="footer">
 		<div>&copy;<script>
