@@ -7,8 +7,9 @@
     flex-flow: row wrap;
     font-weight: bold;
     text-align: center;
+    border-radius: 4px;
 	box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	background: #d0c3c3;
+	background: #f2dee9;
 }
 
 .wrapper > * {
@@ -24,11 +25,11 @@
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
 	color: black;
-	background: #d0c3c3;
+	background: #e9f1de;
 	top: 2px;
     border-radius: 4px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	border-bottom: 2px solid black;
+	border: 2px solid black;
 }
 
 ul { 
@@ -121,6 +122,10 @@ li a:active{
 
 .img3 {
 	height: 200px;
+}
+
+.img4 {
+	height: 100px;
 }
 
 .fullProductImg {

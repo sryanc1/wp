@@ -35,7 +35,9 @@
 			<a target="_blank" href="../../media/bag1.jpg">
 				<img class="productDiv fullProductImg" src="../../media/bag1.jpg" alt="Handbag">
 			</a>
-			<p>something something</p>
+			<p>This handbag can also double as a nappy bag and is feature packed with internal pockets designed to accomidate a <srtong>mobile phone, clutch purse, baby wipes and bottle.</srtong></p>
+			<p>The fabric is from my favourite Tula Pink collection.</p>
+	
 		<form method="post" action=" https://titan.csit.rmit.edu.au/~e54061/wp/processing.php"> 
 			<input name="id" type="hidden" value="001"/>
 			<p>Price: AU$ <br><input class="form" type="text" value="$100.00" readonly/></p>
