@@ -45,7 +45,7 @@
 			<p id="price">Price: $100.00 for mums and $50.00 for bubs sized bags</p>
 			
 			<p>Size: <br>
-			<select id="size" onclick="calculatePrice()" name="option" class="form" required >
+			<select id="size" onchange="calculatePrice()" name="option" class="form" required >
 				<option value="" selected>Please Select</option>
 				<option value="large" >For mums</option>
 				<option value="small">For bubs</option>
@@ -54,8 +54,8 @@
 			
 			<p>Quantity: <br>
 			<input id="qty" onchange="calculatePrice()" class="form" name="qty" type="number" value="" min="0" placeholder="0" required />
-			<span class="button form" id="incrementQty">+</span>
-			<span class="button form" id="decrementQty">-</span>
+			<span class="button" id="incrementQty">+</span>
+			<span class="button" id="decrementQty">-</span>
 			</p>
 			
 			<p><input class="button form" type="submit" value="Buy" /></p>
