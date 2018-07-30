@@ -89,6 +89,7 @@
     </section>
  
     <footer class="footer">
+		<script src='../myHelper.js'></script>
 		<div>&copy;<script>
 			document.write(new Date().getFullYear());
 		</script> Craig Ryan, s3555490.</div>

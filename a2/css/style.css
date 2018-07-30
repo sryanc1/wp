@@ -102,6 +102,8 @@ li a:active{
 
 .productDiv:hover {
 	box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 8px rgba(0, 0, 0, 0.19);
+	transition: 0.5s;
+    -webkit-transition: 0.5s; /* Safari */
 }
 
 .main {
@@ -145,12 +147,16 @@ li a:active{
 }
 
 .button{
+    cursor:pointer;
+    padding-right: 3px;
 	margin-top: 12px;
 	margin-bottom: 5px;
-	margin-left: 2px
+	margin-left: 2px;
 }
+
 .button:hover{
 	background: #4b7e6b;
+	
 }
 
 .footer {

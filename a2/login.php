@@ -8,6 +8,7 @@
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css">
     <script src='../wireframe.js'></script>
+    <script src='../myHelper.js'></script>
 	<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Playfair+Display" rel="stylesheet">
 	<!--All immages used are property of "Posie and Me" and are not for reuse-->
   </head>
@@ -42,6 +43,7 @@
 	</article>
 	
     <footer class="footer">
+		<script src='../myHelper.js'></script>
 		<div>&copy;<script>
 			document.write(new Date().getFullYear());
 		</script> Craig Ryan, s3555490.</div>

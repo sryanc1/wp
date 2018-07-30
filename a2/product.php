@@ -41,36 +41,28 @@
 	
 		<form method="post" action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php"> 
 			<input name="id" type="hidden" value="001"/>
-			<p id='price'>Price: $100.00 for mums and $50 for bubs sized bags</p>
+			
+			<p id="price">Price: $100.00 for mums and $50.00 for bubs sized bags</p>
+			
 			<p>Size: <br>
-			<select id='size' onclick="calculatePrice()" name='option' class="form" required >
-				<option value='' selected>Please Select</option>
-				<option value='large' >For mums</option>
-				<option value='small'>For bubs</option>
-			</select></p>
+			<select id="size" onclick="calculatePrice()" name="option" class="form" required >
+				<option value="" selected>Please Select</option>
+				<option value="large" >For mums</option>
+				<option value="small">For bubs</option>
+			</select>
+			</p>
+			
 			<p>Quantity: <br>
-			<input id='qty' onchange="calculatePrice()" class="form" name="qty" type="number" value="" min="0" placeholder="0" required /></p>
+			<input id="qty" onchange="calculatePrice()" class="form" name="qty" type="number" value="" min="0" placeholder="0" required />
+			<span class="button form" id="incrementQty">+</span>
+			<span class="button form" id="decrementQty">-</span>
+			</p>
+			
 			<p><input class="button form" type="submit" value="Buy" /></p>
+			
 		</form>
 		</fieldset>
 	</article>
-    
-     <!--<script>
-		
-		function calculatePrice() {	
-			//price = size * qty * 100;
-			alert("triggered");
-			document.getElementById("price").innerHTML = "Price: AU$ 200.00";
-			}
-			
-	</script>-->
-    
-    
-    
-    
-    
-    
-    
     
     <footer class="footer">
 		<div>&copy;<script>
