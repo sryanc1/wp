@@ -1,1 +1,188 @@
 /* Insert your styles here */
+
+
+.wrapper {
+	box-sizing: border-box;
+    display: flex; 
+    max-width: 1000px; 
+    margin: auto;
+    flex-flow: row wrap;
+    text-align: center;
+    border-radius: 4px;
+	box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background: #f2dee9;
+}
+
+.wrapper > * {
+	padding: 5px;
+	flex: 1 100%;
+}
+
+.header {
+    font-size: 5em;
+}
+
+.nav {
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	color: black;
+	background: #e9f1de;
+	top: 2px;
+    border-radius: 4px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border: 2px solid black;
+}
+
+ul { 
+	list-style-type: none;
+}
+
+li {
+	display: inline;
+}
+
+li a {
+	text-decoration: none;
+	width: 12em;
+	border: 2px solid black;
+	background: #4b7e6b;
+	border-radius: 4px;
+	margin: 2px;
+	display: inline-block;
+	color: white;
+}
+
+li a:visited {
+	background: #2d4b40;
+	color: balck;
+}
+
+li a:hover {
+	box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transition: 0.5s;
+    -webkit-transition: 0.5s; /* Safari */
+}
+
+li a:active{
+	background: black;
+}
+
+.heading2 {
+    padding: 2px;
+    font-size: 3em;
+    font-family: 'Indie Flower', cursive;
+}
+
+.heading3 {
+    font-size: 2em;
+    text-align: centre;
+    text-decoration: underline;
+}
+
+.div1 {
+    margin: 10px;
+	border: 2px solid black;
+	border-radius: 4px;
+	box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flexDiv {
+	display: flex;  
+    flex-flow: wrap;
+}
+
+.productDiv {
+	border: 2px solid black;
+	font-size: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	background: white;
+	padding: 5px;
+	border-radius: 4px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.productDiv:hover {
+	box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 8px rgba(0, 0, 0, 0.19);
+	transition: 0.5s;
+    -webkit-transition: 0.5s; /* Safari */
+}
+
+.main {
+    text-align: left;
+	padding: 2em;
+    font-family: 'Playfair Display', serif;
+}
+
+.img1 {
+	margin: 20px;
+	float: left;
+}
+
+.img2 {
+	margin: 20px;
+	float: right;
+}
+
+.img3 {
+	height: 200px;
+}
+
+.img4 {
+	height: 100px;
+}
+
+.fullProductImg {
+	float: right;
+	width: 50%;
+	height: auto;	
+}
+
+.form {
+	box-sizing: border-box;
+    display: inline-block;
+	padding-left: 2px;
+	border: 2px solid black;
+	border-radius: 4px;
+	background: white;
+    font-family: 'Playfair Display', serif;
+	font-size: 1em;
+	width: 250px;
+}
+
+.button{
+	padding-left: 2px;
+	border: 2px solid black;
+	border-radius: 4px;
+	background: white;
+    font-family: 'Playfair Display', serif;
+	font-size: 1em;
+	padding-right: 2px;
+    cursor:pointer;
+}
+
+.button:hover{
+	background: #4b7e6b;
+	transition: 0.5s;
+    -webkit-transition: 0.5s; /* Safari */	
+}
+
+.footer {
+    font-family: 'Playfair Display', serif;
+}
+
+@media all and (min-width: 950px) {
+	.main    { flex: 3 0px; }
+	.nav	 { order: 1; }
+	.div1 	 { order: 2; } 
+	.main    { order: 3; }
+	.footer  { order: 4; }
+}
+
+body {
+	padding: 1em; 
+	border-radius: 4px;
+	font-family: 'Indie Flower', cursive;
+	box-sizing: border-box;
+}

@@ -2,11 +2,11 @@
 
 
 .wrapper {
+	box-sizing: border-box;
     display: flex; 
     max-width: 1000px; 
     margin: auto;
     flex-flow: row wrap;
-    font-weight: bold;
     text-align: center;
     border-radius: 4px;
 	box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -59,6 +59,8 @@ li a:visited {
 
 li a:hover {
 	box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transition: 0.5s;
+    -webkit-transition: 0.5s; /* Safari */
 }
 
 li a:active{
@@ -138,6 +140,8 @@ li a:active{
 }
 
 .form {
+	box-sizing: border-box;
+    display: inline-block;
 	padding-left: 2px;
 	border: 2px solid black;
 	border-radius: 4px;
@@ -154,16 +158,14 @@ li a:active{
 	background: white;
     font-family: 'Playfair Display', serif;
 	font-size: 1em;
+	padding-right: 2px;
     cursor:pointer;
-    padding-right: 3px;
-	margin-top: 12px;
-	margin-bottom: 5px;
-	margin-left: 2px;
 }
 
 .button:hover{
 	background: #4b7e6b;
-	
+	transition: 0.5s;
+    -webkit-transition: 0.5s; /* Safari */	
 }
 
 .footer {
