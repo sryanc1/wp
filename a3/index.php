@@ -32,9 +32,9 @@
 		</p>	  
 	</article>
 	
-	/*This section is used to display the latest designs. 
+	<!-- This section is used to display the latest designs. 
 	It should resize depending on the browser window and device 
-	*/
+	-->
 	<section class="div1">
 		<p class="heading3">Latest Designs</p>
 		<div class="flexDiv">

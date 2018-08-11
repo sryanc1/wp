@@ -14,7 +14,7 @@
 		<link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css">
 		<script src='../wireframe.js'></script>
 		<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Playfair+Display" rel="stylesheet">
-		<!--All immages used are property of "Posie and Me" and are not for reuse-->
+		<!-- All immages used are property of "Posie and Me" and are not for reuse -->
 	</head>
 
 	<body>
@@ -60,11 +60,11 @@ FOOTER;
 ?>
 
 
+<?php
 /*Function to display all products on one page
  - this function reads from a .txt file and outputs to HTML 
  Addoped from w3 schools examples.
-*/
-<?php
+
 	function productList() {
 		//Open the text file
 		$myFile = fopen("products.txt", "r") or die("Unable to open file!");
@@ -79,5 +79,5 @@ FOOTER;
 		$outputProducts = <<<"ALLPRODUCTS"
 		
 		
-		
+	} */
 ?>
