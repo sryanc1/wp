@@ -10,13 +10,17 @@
 
 	<article class="main">        
 		<h1 class="heading2">Treat yourself and your littlest one today!</h1>
-		<p><img class="img2" src="../../media/rosie3.png" alt="Picutre of a young child with a butterfly costume">Each item is made in the cottage industry style. 
-		With more years of quilting experience than I care to admit and looking for other challenging endeavors, I’ve turned my skills to fashion. 
-		Each accessory is the culmination of many hours pattern matching, experimentation, colour choice, cutting, sewing, ironing… you get the idea.
+		<p><img class="img2" src="../../media/rosie3.png" alt="Picutre of a young child with a butterfly costume">
+		Each item is made in the cottage industry style. 
+		With more years of quilting experience than I care to admit and looking for other challenging endeavors, 
+		I’ve turned my skills to fashion. 
+		Each accessory is the culmination of many hours pattern matching, 
+		experimentation, colour choice, cutting, sewing, ironing… you get the idea.
 		</p> 
 		<p>Most of my works are made to order, and these are just some examples. 
 		My children are the inspiration for the majority of my creations. 
-		These range from kids clothes to nappy bags and pram liners, handbags with a little extra room, mummy necklaces, and a multitude of other accessories. 
+		These range from kids clothes to nappy bags and pram liners, 
+		handbags with a little extra room, mummy necklaces, and a multitude of other accessories. 
 		Like I said, most of my orders are custom made so if you fancy a fabric or need something special, just let me know!
 		</p> 
 		<p>A feature product of mine are the "Mummy Necklaces". 
@@ -28,9 +32,10 @@
 		</p>	  
 	</article>
 	
-	<!-- This section is used to display the latest designs. 
-	It should resize depending on the browser window and device -->
-    <section class="div1">
+	/*This section is used to display the latest designs. 
+	It should resize depending on the browser window and device 
+	*/
+	<section class="div1">
 		<p class="heading3">Latest Designs</p>
 		<div class="flexDiv">
 			
@@ -63,9 +68,10 @@
 			</div>
 		
 		</div>
-    </section>
+	</section>
 
 <?php
 	endModule();
+	error_reporting( E_ERROR | E_WARNING | E_PARSE );
 ?>
 

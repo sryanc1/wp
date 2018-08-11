@@ -11,7 +11,8 @@
 			<a target="_blank" href="../../media/bag1.jpg">
 				<img class="productDiv fullProductImg" src="../../media/bag1.jpg" alt="Handbag">
 			</a>
-			<p>This handbag can also double as a nappy bag and is feature packed with internal pockets designed to accomidate a <strong>mobile phone, clutch purse, baby wipes and bottle.</strong></p>
+			<p>This handbag can also double as a nappy bag and is feature packed with internal pockets designed 
+			to accomidate a <strong>mobile phone, clutch purse, baby wipes and bottle.</strong></p>
 			<p>The fabric is from my favourite Tula Pink collection.</p>
 	
 		<form method="post" action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php"> 
@@ -43,5 +44,7 @@
     
 <?php
 	endModule();
+	error_reporting( E_ERROR | E_WARNING | E_PARSE );
+
 ?>
 

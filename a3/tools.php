@@ -58,3 +58,26 @@ FOOTER;
 	echo $output;
 	}
 ?>
+
+
+/*Function to display all products on one page
+ - this function reads from a .txt file and outputs to HTML 
+ Addoped from w3 schools examples.
+*/
+<?php
+	function productList() {
+		//Open the text file
+		$myFile = fopen("products.txt", "r") or die("Unable to open file!");
+		
+		//Loop though to get the required details
+		while (!feof($myFile)) {
+			
+			
+		}
+		fclose($myFile);
+		
+		$outputProducts = <<<"ALLPRODUCTS"
+		
+		
+		
+?>

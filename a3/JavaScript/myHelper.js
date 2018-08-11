@@ -6,7 +6,7 @@
  */
 	
 function calculatePrice() {
-	var oderPrice = {
+	var orderPrice = {
 	bag001: { small:50.00, large:100.00 },
 	bag002: { small:50.00, large:100.00 }
 	};
@@ -35,12 +35,12 @@ function calculatePrice() {
 	else {
 		var cost = 0.00;
 		if (size == "large"){
-			cost = oderPrice.bag001.large * qty;
+			cost = orderPrice.bag001.large * qty;
 			priceElement.innerHTML = "Total price: AU$ "+ cost +".00";
 			priceElement.style.backgroundColor = "#4b7e6b";
 		}
 		else if (size == "small"){
-			cost = oderPrice.bag001.small * qty;
+			cost = orderPrice.bag001.small * qty;
 			priceElement.innerHTML = "Total price: AU$ "+ cost +".00";
 			priceElement.style.backgroundColor = "#4b7e6b";	
 		}
@@ -49,6 +49,18 @@ function calculatePrice() {
 	}
 }
 
+//Function used to expand product div to display information and order button
+var expand = document.getElementById("product1");
+expand.addEventListener("click", expandDiv);
+
+	function expandDiv() {
+		var div = document.getElementById("hiddenDiv");
+		if (div.style.maxHeight){
+			div.style.maxHeight = null;
+		} else {
+		div.style.maxHeight = div.scrollHeight + "px";
+		}
+	}
 
 //Function used to increment the quantity field and recalculate the order price
 var incrementButton = document.getElementById("incrementQty");
@@ -75,3 +87,4 @@ decrementButton.addEventListener("click", calculatePrice);
 			}
 		else return;
 		}
+

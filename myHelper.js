@@ -75,3 +75,16 @@ decrementButton.addEventListener("click", calculatePrice);
 			}
 		else return;
 		}
+
+//Function used to expand product div to display information and order button
+var productExpand = document.getElementById("product");
+productExpand.addEventListener("click", expandDiv());
+
+	function expandDiv() {
+		alert("made it");
+		var div = document.getElementById("hiddenDiv");
+		if (div.style.display === "none") {
+			div.style.display = "block";
+		} 
+		else div.style.display = "none";
+		}
