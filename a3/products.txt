@@ -1,1 +1,6 @@
-ID	OID	Title	Description	Option	Price
+ID	OID	Title	Description	Option	Price	Resources
+001	small	Bag	A Bag       	small	100.00	Something
+002	large	Bag	A Bag       	small	100.00	Something
+003	small	Bag	A Bag       	small	100.00	Something
+004	large	Bag	A Bag       	small	100.00	Something
+005	small	Bag	A Bag       	small	100.00	Something
