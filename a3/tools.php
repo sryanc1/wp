@@ -46,6 +46,7 @@ HEADER;
 				document.write(new Date().getFullYear());
 			</script> Craig Ryan, s3555490.</div>
 			<div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
+			<div>Maintain links to your <a href='products.txt'>products spreadsheet</a> and <a href='orders.txt'>orders spreadsheet</a> here. <button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
 			<div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
 		</footer>
     
@@ -57,35 +58,120 @@ FOOTER;
 	}
 
 
-
-	function productList() {
-		
+/*Function to display all products on one page
+ - this function reads from a .txt file and outputs to HTML 
+ Addoped from w3 schools example and pumps.php example. 
+*/
+	
+	function productList() {	
 		$myFile = fopen("products.txt", "r") or die("Unable to open file!"); //Open the text file
 		flock($myFile, LOCK_SH);
 		$productArray=[]; //A 2D array of products (a table)
 		$lineHeading=[]; //First line / haeding of the table file
 		$lineArray=[]; //Contents of the table
-		
 		//Get the required heading details - these will become the keys of the array.
 		$lineHeading = fgetcsv($myFile, 0, "\t"); //fgetcsv() - returns an array.
 		//Loop through until the end of the file.
 		while (!feof($myFile)) {
 			//Read each line of the file - remember fgetcsv() returns a 1D array of values.
 			$lineArray = fgetcsv($myFile, 0, "\t");
-			//For each of these values - assign a key from the "heading line" to the value.
-			foreach ($lineArray as $key => $value) {
-				//As each new line is also an array - assign a key to the array (in this case index zero). 
-				//
-				$productArray[ $lineArray[0] ][ $lineHeading[$key] ] = $lineArray[$key];	
-			}
-			
+			//For each of these values - assign a key from the "heading line" to the value..
+			for ($cell=1; $cell<count($lineArray); $cell++) {
+				//Each new line is also an array - the for loop steps through this line array,
+				//statring at one (not zero). The value of cell zero is reserved for the row key.
+				$productArray[ $lineArray[0]] [$lineHeading[$cell]] = $lineArray[$cell];
+			}	
 		}	
-		print_r($productArray);
-		echo $productArray['001']['OID'];
+		//print_r(count($productArray));
+		//echo '<pre>', print_r($productArray) ,'</pre>';
 		flock($myFile, LOCK_UN);
-		fclose($myFile);		
-				
+		fclose($myFile);
+		foreach ($productArray as $cellItem) {	
+			$oid = $cellItem["OID"];
+			$title = $cellItem["Title"];
+			$description = $cellItem["Description"];
+			$option = $cellItem["Option"];
+			$price = $cellItem["Price"];
+			$resources = $cellItem["Resources"];
+			
+			$list = <<<"PRODUCTLIST"
+			<form class="productDiv" onclick="expandDiv()">
+				<img class="img4" src="$resources" alt="$title" >
+				<p>
+					$title $price
+				</p>
+			</form>
+			
+PRODUCTLIST;
+			echo $list;
+		}
 	} 
+	
+	
+	function formBiulder() {
+		$myFile = fopen("products.txt", "r") or die("Unable to open file!"); //Open the text file
+		flock($myFile, LOCK_SH);
+		$productArray=[]; //A 2D array of products (a table)
+		$lineHeading=[]; //First line / haeding of the table file
+		$lineArray=[]; //Contents of the table
+		//Get the required heading details - these will become the keys of the array.
+		$lineHeading = fgetcsv($myFile, 0, "\t"); //fgetcsv() - returns an array.
+		//Loop through until the end of the file.
+		while (!feof($myFile)) {
+			//Read each line of the file - remember fgetcsv() returns a 1D array of values.
+			$lineArray = fgetcsv($myFile, 0, "\t");
+			//For each of these values - assign a key from the "heading line" to the value..
+			for ($cell=1; $cell<count($lineArray); $cell++) {
+				//Each new line is also an array - the for loop steps through this line array,
+				//statring at one (not zero). The value of cell zero is reserved for the row key.
+				$productArray[ $lineArray[0]] [$lineHeading[$cell]] = $lineArray[$cell];
+			}	
+		}	
+		//print_r(count($productArray));
+		//echo '<pre>', print_r($productArray) ,'</pre>';
+		flock($myFile, LOCK_UN);
+		fclose($myFile);
+		foreach ($productArray as $cellItem) {	
+			$oid = $cellItem["OID"];
+			$title = $cellItem["Title"];
+			$description = $cellItem["Description"];
+			$option = $cellItem["Option"];
+			$price = $cellItem["Price"];
+			$resources = $cellItem["Resources"];
+			
+			$hiddenDiv = <<<"HIDDENDIV"
+			<fieldset class="main">
+				<legend class="heading2">Treat yourself</legend>
+					<a target="_blank" href="$resources">
+						<img class="productDiv fullProductImg" src="$resources" alt="$title">		
+					</a>
+					<p >$description</p>
+			
+				<form method="post" action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php"> 
+					<input name="id" type="hidden" value="001"/>
+					<p>Price: $price for mums and $50.00 for bubs sized bags</p>
+					<p>Size: <br>
+						<select id="size" onchange="calculatePrice()" name="option" class="buttom form" required >
+							<option value="" selected>Please Select</option>
+							<option value="large" >For mums</option>
+							<option value="small">For bubs</option>
+						</select>
+					</p>
+					<p>Quantity: <br>
+						<input id="qty" oninput="calculatePrice()" class="form" name="qty" type="number" value="" min="1" placeholder="0" required />
+						<span class="button" id="incrementQty">+</span>
+						<span class="button" id="decrementQty">-</span>
+					</p>
+					<div id="price" class="form">Total price:</div>
+					<p>
+						<input class="button form" type="submit" value="Buy" />
+					</p>		
+				</form>		
+			</fieldset>
+HIDDENDIV;
+			echo $hiddenDiv;
+		}
+	}
 ?>
 
 

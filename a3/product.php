@@ -15,7 +15,7 @@
 			to accomidate a <strong>mobile phone, clutch purse, baby wipes and bottle.</strong></p>
 			<p>The fabric is from my favourite Tula Pink collection.</p>
 	
-		<form method="post" action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php"> 
+		<form method="post" action="processing.php"> 
 			<input name="id" type="hidden" value="001"/>
 			
 			<p>Price: $100.00 for mums and $50.00 for bubs sized bags</p>

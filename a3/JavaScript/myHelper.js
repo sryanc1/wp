@@ -50,10 +50,9 @@ function calculatePrice() {
 }
 
 //Function used to expand product div to display information and order button
-var expand = document.getElementById("product1");
-expand.addEventListener("click", expandDiv);
 
 	function expandDiv() {
+		//alert("id = " +id);
 		var div = document.getElementById("hiddenDiv");
 		if (div.style.maxHeight){
 			div.style.maxHeight = null;
