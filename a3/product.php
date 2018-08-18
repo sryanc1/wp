@@ -16,7 +16,7 @@
 			<p>The fabric is from my favourite Tula Pink collection.</p>
 	
 		<form method="post" action="processing.php"> 
-			<input name="id" type="hidden" value="001"/>
+			<input name="id" type="hidden" value="001">
 			
 			<p>Price: $100.00 for mums and $50.00 for bubs sized bags</p>
 			
@@ -29,7 +29,7 @@
 			</p>
 			
 			<p>Quantity: <br>
-			<input id="qty" oninput="calculatePrice()" class="form" name="qty" type="number" value="" min="1" placeholder="0" required />
+			<input id="qty" oninput="calculatePrice()" class="form" name="qty" type="number" value="" min="1" placeholder="0" required>
 			<span class="button" id="incrementQty">+</span>
 			<span class="button" id="decrementQty">-</span>
 			</p>
@@ -45,6 +45,5 @@
 <?php
 	endModule();
 	error_reporting( E_ERROR | E_WARNING | E_PARSE );
-
 ?>
 

@@ -1,6 +1,9 @@
-
-<h3>$_GET contains:</h3>
-<pre><?php print_r($_GET); ?></pre>
+<?php
+if (!empty($_GET)) {
+	echo "<h3> $_GET contains:</h3>";
+	echo "var_dump($_GET)";
+}
+?>
 
 <h3>$_POST contains:</h3>
 <pre><?php print_r($_POST); ?></pre>

@@ -53,7 +53,7 @@ li a {
 }
 
 li a:visited {
-	background: #2d4b40;
+	background: #2E9F6A;
 	color: balck;
 }
 
@@ -178,6 +178,32 @@ li a:active{
 	background: #4b7e6b;
 	transition: 0.5s;
 	-webkit-transition: 0.5s; /* Safari */	
+}
+
+
+/*Used on the "All Products" page to style the "buttons - product divs*/
+.formDiv {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	padding: 5px;	
+}
+/*Used on the "All Products" page to style the "buttons - product divs*/
+.formButton {
+	border: 2px solid black;
+	font-size: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	background: white;
+	padding: 5px;
+	border-radius: 4px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.formButton:hover {
+	box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 8px rgba(0, 0, 0, 0.19);
+	transition: 0.5s;
+	-webkit-transition: 0.5s; /* Safari */
 }
 
 .footer {

@@ -6,14 +6,11 @@
  */
 	
 function calculatePrice() {
-	var orderPrice = {
-	bag001: { small:50.00, large:100.00 },
-	bag002: { small:50.00, large:100.00 }
-	};
 	var size = document.getElementById("size").value;
 	var qty = document.getElementById("qty").value;
-	var priceElement = document.getElementById("price");
+	var itemPrice = document.getElementById("itemPrice").value;
 	
+	var priceElement = document.getElementById("price");
 	//If there is no item quantity specified - do nothing
 	if (qty == ""){
 		return;
@@ -35,12 +32,12 @@ function calculatePrice() {
 	else {
 		var cost = 0.00;
 		if (size == "large"){
-			cost = orderPrice.bag001.large * qty;
+			cost = itemPrice * qty;
 			priceElement.innerHTML = "Total price: AU$ "+ cost +".00";
 			priceElement.style.backgroundColor = "#4b7e6b";
 		}
 		else if (size == "small"){
-			cost = orderPrice.bag001.small * qty;
+			cost = ((itemPrice * qty)/2);
 			priceElement.innerHTML = "Total price: AU$ "+ cost +".00";
 			priceElement.style.backgroundColor = "#4b7e6b";	
 		}
@@ -65,12 +62,12 @@ function calculatePrice() {
 var incrementButton = document.getElementById("incrementQty");
 incrementButton.addEventListener("click", countUp);
 incrementButton.addEventListener("click", calculatePrice);
-	
+
 	function countUp() {
 		var qty = document.getElementById("qty").value;
 		qty = Number(qty);
 		document.getElementById("qty").value = qty + 1;
-		}
+	}
 		
 		
 //Function used to increment the quantity field and recalculate the order price
@@ -85,5 +82,5 @@ decrementButton.addEventListener("click", calculatePrice);
 			document.getElementById("qty").value = qty - 1;
 			}
 		else return;
-		}
+	}
 

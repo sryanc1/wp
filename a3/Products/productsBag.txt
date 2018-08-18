@@ -1,0 +1,8 @@
+ID	OID	Title	Description	Option	Price	Resources
+B101	small	Bag	This handbag can also double as a nappy bag and is feature packed with internal pockets designed to accomidate a <strong>mobile phone, clutch purse, baby wipes and bottle.</strong></p><p>The fabric is from my favourite Tula Pink collection.	small	100.00	../../media/bag1.jpg
+B101	large	Bag	This handbag can also double as a nappy bag and is feature packed with internal pockets designed to accomidate a <strong>mobile phone, clutch purse, baby wipes and bottle.</strong></p><p>The fabric is from my favourite Tula Pink collection.	large	100.00	../../media/bag1.jpg
+B102	small	Bag	A Bag	small	100.00	../../media/bag1.jpg
+B102	large	Bag	1 A Bag	large	200.00	../../media/bag1.jpg
+B103	small	Bag	A Bag	small	100.00	../../media/bag1.jpg
+B103	large	Bag	2 A Bag	small	300.00	../../media/bag1.jpg
+B107	small	Bag	3 A Bag	small	400.00	../../media/bag1.jpg

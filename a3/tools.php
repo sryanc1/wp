@@ -35,6 +35,16 @@
 			</nav>
 HEADER;
 	echo $output;
+	
+//Function to style the "current" link 
+	function styleCurrentNavLink( $css ) {
+		$here = $_SERVER['SCRIPT_NAME']; 
+		$bits = explode('/',$here); 
+		$filename = $bits[count($bits)-1]; 
+		echo "<style>nav a[href$='$filename'] { $css }</style>";
+	}
+	styleCurrentNavLink('background-color: black;');
+
 	}
 	
 	function endModule() {
@@ -46,8 +56,7 @@ HEADER;
 				document.write(new Date().getFullYear());
 			</script> Craig Ryan, s3555490.</div>
 			<div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
-			<div>Maintain links to your <a href='products.txt'>products spreadsheet</a> and <a href='orders.txt'>orders spreadsheet</a> here. <button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
-			<div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+			<div>Maintain links to your <a href='Products'>products spreadsheet</a> and <a href='orders.txt'>orders spreadsheet</a> here. <button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
 		</footer>
     
 		</div>
@@ -55,16 +64,37 @@ HEADER;
 </html>
 FOOTER;
 	echo $output;
+
+//Debug module 	
+	function preShow($arr, $retAsString=false) {
+		echo "<pre>";
+			print_r($arr,$retAsString);
+		echo "</pre>";
 	}
+	$get = preShow($_GET,true);
+	preShow($_POST);
+	preShow($_SESSION);
+	preShow($_GET);
+
+	function printMyCode() {
+		$lines = file($_SERVER['SCRIPT_FILENAME']);
+		echo "<pre class='mycode'>\n";
+		foreach ($lines as $lineNo => $lineOfCode)		
+			printf("%3u: %1s \n", $lineNo, rtrim(htmlentities($lineOfCode)));
+		echo "</pre>";
+		}
+	printMyCode();
+	
+	
+}
 
 
 /*Function to display all products on one page
  - this function reads from a .txt file and outputs to HTML 
  Addoped from w3 schools example and pumps.php example. 
-*/
 	
-	function productList() {	
-		$myFile = fopen("products.txt", "r") or die("Unable to open file!"); //Open the text file
+	function productList($file) {	
+		$myFile = fopen($file, "r") or die("Unable to open file!"); //Open the text file
 		flock($myFile, LOCK_SH);
 		$productArray=[]; //A 2D array of products (a table)
 		$lineHeading=[]; //First line / haeding of the table file
@@ -83,7 +113,7 @@ FOOTER;
 			}	
 		}	
 		//print_r(count($productArray));
-		//echo '<pre>', print_r($productArray) ,'</pre>';
+		echo '<pre>', print_r($productArray) ,'</pre>';
 		flock($myFile, LOCK_UN);
 		fclose($myFile);
 		foreach ($productArray as $cellItem) {	
@@ -95,11 +125,14 @@ FOOTER;
 			$resources = $cellItem["Resources"];
 			
 			$list = <<<"PRODUCTLIST"
-			<form class="productDiv" onclick="expandDiv()">
-				<img class="img4" src="$resources" alt="$title" >
-				<p>
-					$title $price
-				</p>
+			<form method="get" action="products.php">
+				<input name="id" type="hidden" value="$oid">
+				<button class="productDiv" type="submit" onclick="expandDiv()"> 
+					<img class="img4" src="$resources" alt="$title" >
+					<p>
+						$title $price
+					</p>
+				</button>
 			</form>
 			
 PRODUCTLIST;
@@ -107,9 +140,9 @@ PRODUCTLIST;
 		}
 	} 
 	
-	
-	function formBiulder() {
-		$myFile = fopen("products.txt", "r") or die("Unable to open file!"); //Open the text file
+*/		
+	function formBiulder($file) {
+		$myFile = fopen($file, "r") or die("Unable to open file!"); //Open the text file
 		flock($myFile, LOCK_SH);
 		$productArray=[]; //A 2D array of products (a table)
 		$lineHeading=[]; //First line / haeding of the table file
@@ -128,7 +161,7 @@ PRODUCTLIST;
 			}	
 		}	
 		//print_r(count($productArray));
-		//echo '<pre>', print_r($productArray) ,'</pre>';
+		echo '<pre>', print_r($productArray) ,'</pre>';
 		flock($myFile, LOCK_UN);
 		fclose($myFile);
 		foreach ($productArray as $cellItem) {	
@@ -159,12 +192,12 @@ PRODUCTLIST;
 					</p>
 					<p>Quantity: <br>
 						<input id="qty" oninput="calculatePrice()" class="form" name="qty" type="number" value="" min="1" placeholder="0" required />
-						<span class="button" id="incrementQty">+</span>
-						<span class="button" id="decrementQty">-</span>
+						<span class="button" id="incrementQty" onclick="calculatePrice($price)">+</span>
+						<span class="button" id="decrementQty" onclick="calculatePrice($price)">-</span>
 					</p>
 					<div id="price" class="form">Total price:</div>
 					<p>
-						<input class="button form" type="submit" value="Buy" />
+						<input class="button form" type="submit" value="Add to cart" />
 					</p>		
 				</form>		
 			</fieldset>
