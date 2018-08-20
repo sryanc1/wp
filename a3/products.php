@@ -60,7 +60,7 @@
 			
 PRODUCTLIST;
 				echo $list; //echo out the HTML to make the web page
-				}
+			}
 		}
 		else { 	//If there is an item in the get array 
 			foreach ($productArray as $cellItem) {	
