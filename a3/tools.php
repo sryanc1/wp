@@ -29,7 +29,7 @@
 				<ul>
 					<li><a href="index.php">Home</a></li>
 					<li><a href="products.php">All Products</a></li>
-					<li><a href="design.php">Design Studio</a></li>
+					<li><a href="shoppingCart.php">Shopping Cart</a></li>
 					<li><a href="login.php">Login</a></li>
 				</ul>  
 			</nav>
@@ -140,7 +140,7 @@ PRODUCTLIST;
 		}
 	} 
 	
-*/		
+
 	function formBiulder($file) {
 		$myFile = fopen($file, "r") or die("Unable to open file!"); //Open the text file
 		flock($myFile, LOCK_SH);
@@ -205,6 +205,7 @@ HIDDENDIV;
 			echo $hiddenDiv;
 		}
 	}
+*/		
 ?>
 
 

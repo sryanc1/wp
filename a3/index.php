@@ -24,10 +24,10 @@
 		Like I said, most of my orders are custom made so if you fancy a fabric or need something special, just let me know!
 		</p> 
 		<p>A feature product of mine are the "Mummy Necklaces". 
-		They are made from food grade silicon and are designed specificaly for bubs to chew on! 
-		First and formost they'er a stylish fashion statment, with their bright colours and pretty patterns. 
-		If however you're out and about with a bub thats teething they can come in really handy.
-		And lets face it ladies, bub are always pulling at things around our necks when being carried or at feeding time. 
+		They are made from food grade silicon and are designed specifically for bubs to chew on! 
+		First and foremost they're a stylish fashion statement, with their bright colours and pretty patterns. 
+		If however you're out and about with a bub that's teething they can come in really handy.
+		And let's face it ladies, bub are always pulling at things around our necks when being carried or at feeding time. 
 		With this in mind I've also designed them with a quick release toggle. 
 		</p>	  
 	</article>
@@ -40,28 +40,28 @@
 		<div class="flexDiv">
 			
 			<div class="productDiv">
-				<a href="product.php">
+				<a href="products.php">
 					<img class="img3" src="../../media/bag1.jpg" alt="Handbag">
 					<p>Handbags / Nappybags<p>	
 				</a>
 			</div>
 			
 			<div class="productDiv">
-				<a href="product.php">
+				<a href="products.php">
 					<img class="img3" src="../../media/necklace2.jpg" alt="Mummy necklace">
 					<p>Mummy Necklaces</p>
 				</a>
 			</div>
 			
 			<div class="productDiv">
-				<a href="product.php">
+				<a href="products.php">
 					<img class="img3" src="../../media/earings1.jpg" alt="painted striped earrings">
 					<p>Earrings</p>
 				</a>
 			</div>
 			
 			<div class="productDiv">
-				<a href="product.php">
+				<a href="products.php">
 					<img class="img3" src="../../media/bracelet1.jpg" alt="A range of beaded bracelets">
 					<p>Bracelets</p>
 				</a>

@@ -37,7 +37,7 @@ function calculatePrice() {
 			priceElement.style.backgroundColor = "#4b7e6b";
 		}
 		else if (size == "small"){
-			cost = ((itemPrice * qty)/2);
+			cost = ((itemPrice * qty) * 0.5);
 			priceElement.innerHTML = "Total price: AU$ "+ cost +".00";
 			priceElement.style.backgroundColor = "#4b7e6b";	
 		}

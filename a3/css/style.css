@@ -31,6 +31,7 @@
 	border-radius: 4px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	border: 2px solid black;
+	z-index: +5;
 }
 
 ul { 
@@ -139,30 +140,8 @@ li a:active{
 	height: 200px;
 }
 
-/*thumb nail immage used on all products page*/
-.img4 {
-	height: 100px;
-	margin-top: auto;
-}
 
-.img5 {
-	height: 150px;
-	float: right;
-	margin-bottom: 10px;
-	margin-top: 10px;
-	margin-right: 10px;
-}
-
-.cartDiv {
-	margin: 10px;
-	border: 2px solid black;
-	border-radius: 4px;
-	box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	overflow: auto;
-	text-align: left;
-}
-
-/*Immage used in product popout and full page product*/
+/*Image used in product popout and full page product*/
 .fullProductImg {
 	float: right;
 	width: 50%;
@@ -179,9 +158,10 @@ li a:active{
 	font-family: 'Playfair Display', serif;
 	font-size: 1em;
 	width: 250px;
+	position: relative;
 }
 
-.button{
+.button {
 	padding-left: 2px;
 	border: 2px solid black;
 	border-radius: 4px;
@@ -192,29 +172,31 @@ li a:active{
 	cursor:pointer;
 }
 
-.button:hover{
+.button:hover {
 	background: #4b7e6b;
 	transition: 0.5s;
 	-webkit-transition: 0.5s; /* Safari */	
 }
 
 
-/*Used on the "All Products" page to style the "buttons - product divs*/
+/****Used on the "All Products" page to style the "buttons - product divs****/
 .formDiv {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 20px;
-	padding: 5px;	
+	padding: 5px;
+	width: calc(50% - 16px);
 }
-/*Used on the "All Products" page to style the "buttons - product divs*/
 .formButton {
 	border: 2px solid black;
 	font-size: 1em;
+	text-align: left;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 20px;
 	background: white;
 	padding: 5px;
+	width: calc(100% - 5px);
 	border-radius: 4px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -223,11 +205,59 @@ li a:active{
 	transition: 0.5s;
 	-webkit-transition: 0.5s; /* Safari */
 }
+.img4 {
+	height: 135px;
+	margin: 5px;
+	float:left;
+}
 
+/*****Cart items*****/
+.img5 {
+	height: 150px;
+	float: right;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.cartDiv {
+	margin: 10px;
+	border: 2px solid black;
+	border-radius: 4px;
+	box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	overflow: auto;
+	text-align: left;
+}
+.cartButtons {
+	padding-left: 2px;
+	border: 2px solid black;
+	border-radius: 4px;
+	background: white;
+	font-family: 'Indie Flower', cursive;
+	font-size: 1.5em;
+	padding-right: 2px;
+	cursor:pointer;
+}
+.cartButtons:hover {
+	background: #4b7e6b;
+	transition: 0.5s;
+	-webkit-transition: 0.5s; /* Safari */	
+}
+
+
+/*****Checkout page*****/
+.errorSpan {
+	padding: 5px;
+	color: red;
+}
+
+
+/*****Footer*****/
 .footer {
 	font-family: 'Playfair Display', serif;
 }
 
+
+/*****Media calls*****/
 @media all and (min-width: 950px) {
 	.main    { flex: 3 0px; }
 	.nav	 { order: 1; }

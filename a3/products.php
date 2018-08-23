@@ -3,6 +3,15 @@
 	include_once("tools.php"); // contains modules and functions
 	topModule("All products page");
 	
+	//Products page summits to self - add selected item to the session cart array
+	if (isset($_POST['ID'], $_POST['qty'], $_POST['OID'])) {
+		$id = $_POST['ID'];
+		$oid = $_POST['OID'];
+		//Concatinate product ID and OrderID to form a unique cart ID
+		$_SESSION['cart'][$id.$oid] = $_POST;
+	}
+	
+		
 /* Function to display all products on one page
  * Addoped from w3 schools example and pumps.php example. 
  * 
@@ -33,7 +42,7 @@
 		//print_r(count($productArray));	
 		flock($myFile, LOCK_UN);
 		fclose($myFile);
-		
+
 		//Check to see if a valid product has been selected
 		if ( empty($_GET['ID']) || !isset( $productArray[$_GET['ID']])) {
 			//Get all the info from the array table and set them as variables if no product is selected 
@@ -45,18 +54,22 @@
 				$description = $cellItem["Description"];
 				$option = $cellItem["Option"];
 				$price = $cellItem["Price"];
+				$short = $cellItem["Short Description "];
 				$resources = $cellItem["Resources"];
+				
 				//For each row of variables, insert them in the HTML
 				$list = <<<"PRODUCTLIST"
-				<form class="formDiv" method="get" action="products.php">
-					<input name="ID" type="hidden" value="$id">
-					<button  class="formButton" type="submit"> 
-						<img class="img4" src="$resources" alt="$title" >
-						<p>
-							$title $$price
-						</p>
-					</button>
-				</form>
+				<article class="formDiv">
+					<form method="get" action="products.php">
+						<input name="ID" type="hidden" value="$id">
+						<button  class="formButton" type="submit"> 
+							<img class="img4" src="$resources" alt="$title" >
+							<p>
+								$title <br> $short <br>Price: $$price
+							</p>
+						</button>
+					</form>
+				</article>
 			
 PRODUCTLIST;
 				echo $list; //echo out the HTML to make the web page
@@ -71,7 +84,7 @@ PRODUCTLIST;
 				$option = $cellItem["Option"];
 				$price = $cellItem["Price"];
 				$resources = $cellItem["Resources"];
-
+				$smallPrice = ($cellItem["Price"] * 0.5);
 
 				if ($_GET['ID'] == $id){ //Find a matching product ID
 					 
@@ -85,14 +98,14 @@ PRODUCTLIST;
 						<p>$description</p>
 						<input id="itemPrice" type="hidden" value=$price>
 						
-					<form method="post" action="shoppingCart.php"> 
+					<form method="post" action="products.php"> 
 						<input name="ID" type="hidden" value=$id>
-						<p>Price: $$price for mums and $50.00 for bubs sized bags</p>
+						<p>Price: $$price for the larger size and $$smallPrice.00 for smaller sized option</p>
 						<p>Size: <br>
 							<select id="size" onchange="calculatePrice()" name="OID" class="buttom form" required >
 								<option value="" selected>Please Select</option>
-								<option value="large" >For mums</option>
-								<option value="small">For bubs</option>
+								<option value="large" >Large</option>
+								<option value="small">Small</option>
 							</select>
 						</p>
 						<p>Quantity: <br>
@@ -108,6 +121,7 @@ PRODUCTLIST;
 				</fieldset>
 FORM;
 			echo $form;
+				
 				}
 			}
 		}			
@@ -142,8 +156,8 @@ FORM;
 			productList("Products/productsNecklace.txt");
 			?>
 		</div>
-			
-			
+<?php
+/*--------------To be used in the future---------------
 		<div>
 			<p class="heading3">Earrings</p>
 		</div>
@@ -164,7 +178,9 @@ FORM;
 			productList("Products/productsBag.txt");
 			?>			
 		</div>	
-	</section>       
+	</section>
+*/
+?>
 <?php
 	endModule();
 	error_reporting( E_ERROR | E_WARNING | E_PARSE );
