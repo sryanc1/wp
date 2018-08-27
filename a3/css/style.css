@@ -185,7 +185,8 @@ li a:active{
 	margin-right: auto;
 	margin-bottom: 20px;
 	padding: 5px;
-	width: calc(50% - 16px);
+	width: calc(100% - 16px);
+	
 }
 .formButton {
 	border: 2px solid black;
@@ -258,12 +259,13 @@ li a:active{
 
 
 /*****Media calls*****/
-@media all and (min-width: 950px) {
+@media all and (min-width: 550px) {
 	.main    { flex: 3 0px; }
 	.nav	 { order: 1; }
 	.div1 	 { order: 2; } 
 	.main    { order: 3; }
 	.footer  { order: 4; }
+	.formDiv {width: calc(50% - 16px);
 }
 
 body {
