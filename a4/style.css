@@ -1,0 +1,29 @@
+.div1 {
+  padding:20px;
+  margin:20px;
+  background: rgba(40,40,40,0.1);
+  border: 10px solid hsl(314,0%,40%);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.div2 {
+	border: 2px solid black;
+	font-size: 1em;
+	margin-bottom: 20px;
+	background: white;
+	padding: 5px;
+	border-radius: 4px;
+	width: 127px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.inGroup {
+	display: inline-block;
+	
+	padding: 2.5px;
+}
+
+.group {
+	padding: 10px;
+}

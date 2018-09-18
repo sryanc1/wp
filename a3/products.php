@@ -63,7 +63,7 @@
 					<form method="get" action="products.php">
 						<input name="ID" type="hidden" value="$id">
 						<button  class="formButton" type="submit"> 
-							<img class="img4" src="$resources" alt="$title" >
+							<img class="productDiv img4" src="$resources" alt="$title" >
 							<p>
 								$title <br> $short <br>Price: $$price
 							</p>

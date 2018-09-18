@@ -24,7 +24,7 @@
 				$oid = $cell["OID"];
 				$qty = $cell["qty"];
 				if ($qty >= 1) {
-					//Check which file to order originally came from - a bit of a hacky away of doing it
+					//Check which file the order originally came from - a bit of a hacky away of doing it
 					if ($id[0] == "B") {
 						$file = "Products/productsBag.txt";
 					} else if ($id[0] == "N") {
@@ -39,6 +39,7 @@
 						$lineArray = fgetcsv($myFile, 0, "\t");
 						//Check the product ID and Order ID exist in the same product line
 						if (in_array($id, $lineArray) && in_array($oid, $lineArray)) {
+							//Make the order line an associative array with the headings as keys
 							$cellItem = array_combine($lineHeading, $lineArray);
 							$id = $cellItem["ID"]; 
 							$oid = $cellItem["OID"];
@@ -68,6 +69,7 @@ CARTLIST;
 				fclose($myFile);
 			}	
 		} else {
+			$costTotal = 0.00;
 			echo "<p>Nothing in your shopping cart yet</p>";
 		}
 		
@@ -75,9 +77,9 @@ CARTLIST;
 		$endCart = <<<"ENDCART"
 		<div>
 			<form method="post" action="shoppingCart.php">
-				<span style="float: left;"><input class="form cartButtons" type="submit" name="empty" value="Empty cart" /></span>
-				<span class="heading3">Cart total: $$costTotal.00</span>
-				<span style="float: right;"><input class="form cartButtons" type="submit" name="purchase" value="Purchase items" /></span>
+				<span><input class="form cartButtons li" type="submit" name="empty" value="Empty cart" /></span>
+				<span style="padding: 10px;" class="heading3 li">Cart total: $$costTotal.00</span>
+				<span><input class="form cartButtons li" type="submit" name="purchase" value="Purchase items" /></span>
 			</form>
 		</div>
 		
