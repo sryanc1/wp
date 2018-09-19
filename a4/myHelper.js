@@ -17,6 +17,7 @@ function updateCount() {
 		} else {
 			var audio = new Audio('audio_file.mp3');
 			audio.play();
+			document.getElementById("diffTotal").style.backgroundColor = "lightgreen";
 		}
 			
 	} else {
