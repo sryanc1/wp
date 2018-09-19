@@ -1,6 +1,6 @@
 document.addEventListener('keypress', updateCount);
 
-function updateCount() {
+function updateCount(event) {
 	
 	var cellArray = ["z","x","c","v","b","n","m","d","f","g","h"];
 	var keyName = event.key;
