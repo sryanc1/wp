@@ -1,10 +1,14 @@
 .div1 {
-  padding:20px;
-  margin:20px;
-  background: rgba(40,40,40,0.1);
-  border: 10px solid hsl(314,0%,40%);
-  border-radius: 6px;
-  box-sizing: border-box;
+	padding:20px;
+	margin:20px;
+	background: rgba(40,40,40,0.1);
+	border: 10px solid hsl(314,0%,40%);
+	background-image: url("cells.jpeg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 6px;
+	box-sizing: border-box;
 }
 
 .div2 {
@@ -20,10 +24,76 @@
 
 .inGroup {
 	display: inline-block;
-	
 	padding: 2.5px;
 }
 
 .group {
 	padding: 10px;
+}
+
+.indexButtonDiv1 {
+	float:left;
+	width:50%;
+	min-height: 400px;
+}
+
+.indexButtonDiv2 {
+	float:right;
+	width:50%;
+	min-height: 400px;
+}
+
+.button1 {
+	border: 2px solid black;
+	font-size: 1em;
+	background-color: powderblue;
+	padding: 5px;
+	margin: 10px;
+	margin-top: 125px;
+	float: right;
+	cursor: pointer;
+	border-radius: 4px;
+	width: 127px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button2 {
+	border: 2px solid black;
+	font-size: 1em;
+	background-color: powderblue;
+	padding: 5px;
+	margin: 10px;
+	margin-top: 125px;
+	float: left;
+	cursor: pointer;
+	border-radius: 4px;
+	width: 127px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button3 {
+	border: 2px solid black;
+	font-size: 1em;
+	background-color: powderblue;
+	padding: 5px;
+	margin: 10px;
+	border-radius: 4px;
+	width: 127px;
+	cursor: pointer;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button1:hover {
+	box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);
+	transition: 0.5s;
+}
+
+.button2:hover {
+	box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);
+	transition: 0.5s;
+}
+
+.button3:hover {
+	box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);
+	transition: 0.5s;
 }
