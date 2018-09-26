@@ -5,7 +5,7 @@
 	<body>	
 		<article class="div1">
 			<header>
-				<h1 style="text-align: center">FMC Heamatology Cell Counter</h1>
+				<h1 style="text-align: center">FMC Haematology Cell Counter</h1>
 			</header>
 	<main>
 		<form class="indexButtonDiv1" method="get" action="blood.php">

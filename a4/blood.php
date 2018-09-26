@@ -6,7 +6,7 @@
 	<body>	
 		<article class="div1" style="background: rgba(40,40,40,0.1)">
 			<header>
-				<h1 style="text-align: center">FMC Heamatology Cell Counter</h1>
+				<h1 style="text-align: center">FMC Haematology Cell Counter</h1>
 			</header>
 		<input id="type" value="blood" hidden>
 <?php
