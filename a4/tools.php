@@ -4,13 +4,15 @@
 	function topModule() {
 		$output = <<<"HEADER"
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
 <html lang='en'>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>White cell differential counter</title>
 		<link id="stylecss" type="text/css" rel="stylesheet" href="style.css">
+		<hta:application applicationname="HTA Test" scroll="yes" singleinstance="yes">
 	</head>			
 
 		
@@ -130,7 +132,7 @@ MID;
 		
 			<details closed>
 				<p>The motivation for this web application was to provide a platform for off-line differentials such as those for RCPA and training slides.</p>
-				<div>This web app contains the following features<\div>
+				<div>This web app contains the following features:
 					<ul>
 						<li>Blood film and marrow cell counter options</li>
 						<li>User defined total numbers of cells to count</li>
@@ -140,9 +142,10 @@ MID;
 						<li>Consistent cell naming with current applications</li>
 						<li>A count reset function</li>
 						<li>For best results, please use a Chrome Web Browser</li>
+						<input type="button" onclick="openURL()" value="Open Link in Chrome">
 					</ul>
 				<p>If you encounter any issues using this application please notify me as soon as possible (craig.ryan@sa.gov.au)<\p>
-				
+				<\div>
 			<footer class="footer">
 				<script src='myHelper.js'></script>
 				<div>&copy;

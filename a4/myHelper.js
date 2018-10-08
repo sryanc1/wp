@@ -123,3 +123,10 @@ function rewind() {
 		document.getElementById("cellsCounted").value = y.join("");
 	}
 }
+
+
+function openURL() {
+	var shell = new ActiveXObject("WScript.Shell");
+	shell.run("chrome https://titan.csit.rmit.edu.au/~s3555490/wp/a4/index.php");
+}
+
