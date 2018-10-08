@@ -101,6 +101,10 @@ HEADER;
 					NRBCs = M <br>
 						<input class="div2" id="m" value="0" readonly>	
 					</div>
+					
+					<div class="inGroup">
+						<input id="cellsCounted" value="" readonly hidden>
+					</div>
 				</div>
 				<div class="group" style="margin: auto; width: 47.5%;">
 					<div class="inGroup">
@@ -110,6 +114,9 @@ HEADER;
 					</div>
 					<div class="inGroup">
 						<input id="percentageButton" class="button3" value="Calc Percent" style="text-align: center" readonly>
+					</div>
+					<div class="inGroup">
+						<input id="rewindButton" class="button3" value="Rewind Count" style="text-align: center" readonly> 
 					</div>
 	
 MID;
@@ -122,20 +129,27 @@ MID;
 		$output = <<<"END"
 		
 			<details closed>
-				<div>Things to be added in the next release:</div>
+				<p>The motivation for this web application was to provide a platform for off-line differentials such as those for RCPA and training slides.</p>
+				<div>This web app contains the following features<\div>
 					<ul>
+						<li>Blood film and marrow cell counter options</li>
+						<li>User defined total numbers of cells to count</li>
+						<li>Cells highlighting to keep track of cells counted</li>
+						<li>A 1 cell at a time rewind function</li>
 						<li>Percentage calculations</li>
-						<li>Internet Explorer compatability</li>
-						<li>User defined diff total count</li>
-						<li>User defined cell types</li>
+						<li>Consistent cell naming with current applications</li>
+						<li>A count reset function</li>
+						<li>For best results, please use a Chrome Web Browser</li>
 					</ul>
+				<p>If you encounter any issues using this application please notify me as soon as possible (craig.ryan@sa.gov.au)<\p>
+				
 			<footer class="footer">
 				<script src='myHelper.js'></script>
 				<div>&copy;
 				<script>document.write(new Date().getFullYear());</script>
-				Craig Ryan. version 1.2
+				Craig Ryan. version 2.1
 				</div>
-				<div>Disclaimer: This website is not an official SA Health website and should not be used for reporting actual patient differentials</div>
+				<div>Disclaimer: This website is not an official SA Health website and results should be interpreted with caution if used for patient differentials</div>
 			</footer>
 			</details>			
 		</article>
