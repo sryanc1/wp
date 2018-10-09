@@ -81,6 +81,7 @@ function calc(type, cellArray) {
 	this.type = type;
 	this.cellArray = cellArray;
 	var percent = 0;
+	var percentHighest = 0;
 	var percentTot = 0;
 	var turn = 1;
 	var len = cellArray.length;
@@ -89,18 +90,24 @@ function calc(type, cellArray) {
 	for (i=0; i<len; i++) {
 		var cellType = document.getElementById(cellArray[i]).value;
 		cellType = Number(cellType);
-		percent = (cellType / countTotal)*100;
+		percent = (cellType / countTotal)*100; 
 		if (percent % 0.5 == 0 && percent != 0 && turn / 2 == 0.5) {
 			percent = Math.floor(percent);
 			turn = turn +1;
 		} 
 		percent = Math.round(percent);
+		if (percent > percentHighest) {
+			percentHighest = percent;
+			var highestCell = cellArray[i]
+		}
 		document.getElementById(cellArray[i]).value = percent;
 		document.getElementById(cellArray[i]).style.backgroundColor = "lightgreen";
 		percentTot = percentTot + percent;
 	}
 	if (percentTot !=100) {
-		alert("Warning! due to rounding the total percentage is " + percentTot + ", consider rounding the highest precentage");
+		var dif = percentTot - 100;
+		document.getElementById(highestCell).value = percentHighest - dif;
+		alert("Warning! due to rounding the total percentage was calculated at " + percentTot + "%, the highest cell percentage has been ajusted accordingly");
 	}
 }
 
