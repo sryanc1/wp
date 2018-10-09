@@ -80,16 +80,27 @@ function calc(type, cellArray) {
 	
 	this.type = type;
 	this.cellArray = cellArray;
-	
+	var percent = 0;
+	var percentTot = 0;
+	var turn = 1;
 	var len = cellArray.length;
 	var countTotal = document.getElementById("diffTotal").value;
 	countTotal = Number(countTotal);
 	for (i=0; i<len; i++) {
 		var cellType = document.getElementById(cellArray[i]).value;
 		cellType = Number(cellType);
-		var percent = (cellType / countTotal)*100;
-		document.getElementById(cellArray[i]).value = Math.round(percent);
+		percent = (cellType / countTotal)*100;
+		if (percent % 0.5 == 0 && percent != 0 && turn / 2 == 0.5) {
+			percent = Math.floor(percent);
+			turn = turn +1;
+		} 
+		percent = Math.round(percent);
+		document.getElementById(cellArray[i]).value = percent;
 		document.getElementById(cellArray[i]).style.backgroundColor = "lightgreen";
+		percentTot = percentTot + percent;
+	}
+	if (percentTot !=100) {
+		alert("Warning! due to rounding the total percentage is " + percentTot + ", consider rounding the highest precentage");
 	}
 }
 

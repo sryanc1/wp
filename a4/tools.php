@@ -101,7 +101,7 @@ HEADER;
 
 					<div class="inGroup">
 					NRBCs = M <br>
-						<input class="div2" id="m" value="0" readonly>	
+						<input class="div2" id="m" value="0" readonly> per 100 WBCs
 					</div>
 					
 					<div class="inGroup">
@@ -144,8 +144,8 @@ MID;
 						<li>For best results, please use a Chrome Web Browser</li>
 						<input type="button" onclick="openURL()" value="Open Link in Chrome">
 					</ul>
-				<p>If you encounter any issues using this application please notify me as soon as possible (craig.ryan@sa.gov.au)<\p>
-				<\div>
+				<p>If you encounter any issues using this application please notify me as soon as possible (craig.ryan@sa.gov.au)
+				
 			<footer class="footer">
 				<script src='myHelper.js'></script>
 				<div>&copy;
