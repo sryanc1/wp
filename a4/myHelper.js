@@ -1,3 +1,6 @@
+
+
+//--------------CELL TRACKING / COUNTING FUNCTION-----------------------
 document.addEventListener('keypress', updateCount);
 
 function updateCount(event) {
@@ -16,7 +19,7 @@ function updateCount(event) {
 		var len = cellArray.length;
 		for (i=0; i<len; i++) {
 			if (keyName == cellArray[i]) {
-				var keyFound = true;
+				keyFound = true;
 			} 
 		}
 		if (keyFound == true && countTotal !== numToCount) {
@@ -61,6 +64,8 @@ function updateCount(event) {
 	}
 }
 
+
+//----------------FUNCTIONS TO CALCULATE PERCENTAGES--------------------
 var percentageButton = document.getElementById("percentageButton");
 percentageButton.addEventListener("click", percentageCalc);
 
@@ -80,30 +85,44 @@ function calc(type, cellArray) {
 	
 	this.type = type;
 	this.cellArray = cellArray;
-	var percent = 0;
-	var percentHighest = 0;
-	var percentTot = 0;
-	var turn = 1;
+	var percent = 0;				//percent of the current cell
+	var percentHighest = 0;			//highest percent is used for adjustments
+	var percentTot = 0;				//make sure the final percent = 100
+	var turn = 2;					//to track percentages ending in .5
 	var len = cellArray.length;
 	var countTotal = document.getElementById("diffTotal").value;
 	countTotal = Number(countTotal);
+	
+	
 	for (i=0; i<len; i++) {
 		var cellType = document.getElementById(cellArray[i]).value;
 		cellType = Number(cellType);
 		percent = (cellType / countTotal)*100; 
-		if (percent % 0.5 == 0 && percent != 0 && turn / 2 == 0.5) {
-			percent = Math.floor(percent);
+			
+		//Average percentages ending with .5 that would otherwise round up
+		if (percent % 0.5 == 0 && percent != 0) {
 			turn = turn +1;
-		} 
-		percent = Math.round(percent);
-		if (percent > percentHighest) {
+			if (turn % 2 == 0) {
+				percent = Math.floor(percent);
+			}
+		}		
+		//Function to round percentages to whole numbers
+		percent = Math.round(percent);	
+		
+		//Find the highest count and use this to adjust percentage varience
+		if (percent > percentHighest && cellArray[i] != "m") {
 			percentHighest = percent;
 			var highestCell = cellArray[i]
-		}
+		}	
+			
 		document.getElementById(cellArray[i]).value = percent;
-		document.getElementById(cellArray[i]).style.backgroundColor = "lightgreen";
-		percentTot = percentTot + percent;
-	}
+		document.getElementById(cellArray[i]).style.backgroundColor = "lightgreen";		
+		//Exclude NRBC's from the total percentage adjusments - NRBC's are non-totaling 
+		if (cellArray[i] != "m") {
+			percentTot = percentTot + percent;
+		}
+	}	
+	//Make final adjustment to the count with the highest percentage - ie least affected 
 	if (percentTot !=100) {
 		var dif = percentTot - 100;
 		document.getElementById(highestCell).value = percentHighest - dif;
@@ -111,6 +130,8 @@ function calc(type, cellArray) {
 	}
 }
 
+
+//-------------REWIND CELL COUNT FUNCTION-------------------
 var rewindButton = document.getElementById("rewindButton");
 rewindButton.addEventListener("click",rewind);
 
@@ -118,21 +139,21 @@ function rewind() {
 	
 	var countTotal = document.getElementById("diffTotal").value;
 	countTotal = Number(countTotal);
-	
 	var cellsCounted = document.getElementById("cellsCounted").value;
-	
 	var a = false;
+	
+	//Check to make sure the cell tracking box is not empty
 	if (cellsCounted != "") {
 		a = true;
 	}
 	
+	//split() sets the values of the cells counted so far in an array
 	var y = cellsCounted.split("");
+	//pop() deletes and returns the last value of the cell tracking box- in this case x
 	var x = y.pop();
-
 	var cellCount = document.getElementById(x).value;
 	cellCount = Number(cellCount);
 	
-
 	if (a == true) {
 		document.getElementById("diffTotal").style.backgroundColor = "lightyellow";
 		document.getElementById("diffTotal").value = countTotal -1;
@@ -143,6 +164,7 @@ function rewind() {
 }
 
 
+//--------------OPEN CHROME FROM IE----------------- does not work?
 function openURL() {
 	var shell = new ActiveXObject("WScript.Shell");
 	shell.run("chrome https://titan.csit.rmit.edu.au/~s3555490/wp/a4/index.php");
