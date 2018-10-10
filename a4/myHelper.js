@@ -71,13 +71,18 @@ percentageButton.addEventListener("click", percentageCalc);
 
 function percentageCalc() {
 	
-	var type = document.getElementById("type").value;
-	if (type == "blood"){
-		var cellArray = ["z","x","c","v","b","n","m","d","f","g","h"];
-		calc(type, cellArray);
-	} else if (type == "marrow") {
-		var cellArray = ["a","s","d","f","g","z","x","c","v","b","n"];
-		calc(type, cellArray);
+	var alreadyCalculated = document.getElementById("cellsCounted").value
+	if ( alreadyCalculated != "q") {
+		var type = document.getElementById("type").value;
+		if (type == "blood"){
+			var cellArray = ["z","x","c","v","b","n","m","d","f","g","h"];
+			calc(type, cellArray);
+		} else if (type == "marrow") {
+			var cellArray = ["a","s","d","f","g","z","x","c","v","b","n"];
+			calc(type, cellArray);
+		}
+	} else if (document.getElementById("cellsCounted").value = "q") {
+		alert("The percentage has alreay been calculated");
 	}
 }
 
@@ -128,6 +133,7 @@ function calc(type, cellArray) {
 		document.getElementById(highestCell).value = percentHighest - dif;
 		alert("Warning! due to rounding the total percentage was calculated at " + percentTot + "%, the highest cell percentage has been ajusted accordingly");
 	}
+	document.getElementById("cellsCounted").value = "q";
 }
 
 
